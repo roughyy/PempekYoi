@@ -28,8 +28,8 @@ $update_cart->execute();
 //header('Location: ' . $_SERVER['HTTP_REFERER']);
 
 
-$va           = '1179001351442722'; //get on iPaymu dashboard
-$secret       = '77FE89EA-1C3F-4D38-AA2B-3DC8A200AC79'; //get on iPaymu dashboard
+$va           = ''; //get on iPaymu dashboard
+$secret       = ''; //get on iPaymu dashboard
 
 //$url          = 'https://my.ipaymu.com/api/v2/payment'; //url
 $url          = 'https://sandbox.ipaymu.com/api/v2/payment'; //url
@@ -40,9 +40,9 @@ $method       = 'POST'; //method
 $body['product']    = array('Pempek Yoi');
 $body['qty']        = array('1');
 $body['price']      = array($gt);
-$body['returnUrl']  = 'https://mywebsite.com/thankyou/cetakNoVa.php?no_invoice=' . $invoice_id;
-$body['cancelUrl']  = 'https://mywebsite.com/thankyouangel/index.php';
-$body['notifyUrl']  = 'https://mywebsite.com/thankyou/konfirmasiOtomatis.php?no_invoice=' . $invoice_id;
+$body['returnUrl']  = 'https://mywebsite.com/cetakNoVa.php?no_invoice=' . $invoice_id;
+$body['cancelUrl']  = 'https://mywebsite.com/index.php';
+$body['notifyUrl']  = 'https://mywebsite.com/konfirmasiOtomatis.php?no_invoice=' . $invoice_id;
 //End Request Body//
 
 //Generate Signature
